@@ -69,7 +69,7 @@ This project is licensed under the MIT License.
 ## Contact
 
 For questions or collaboration, contact:  
-[SHASHWAT THAKUR](linkedin.com/in/shashwat-thakur-2b2618354)
+[SHASHWAT THAKUR](linkedin.com/in/shwat)
 
 ---
 
