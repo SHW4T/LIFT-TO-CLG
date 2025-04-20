@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration and Login System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-container" id="form-container">
+      <h2 id="form-title">Register</h2>
+      <form id="auth-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="eg:abc.xyz24@vit.edu"><br><br>
+        <div id="email-error" class="email-error"></div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="must be 6 character" required><br><br>
+        <div id="Branch-container">
+          <label for="Branch">Branch:</label>
+          <select id="Branch" name="Branch">
+            <option value="CS">CS</option>
+            <option value="IT">IT</option>
+            <option value="CSE(AIML)">CSE(AIML)</option>
+            <option value="CSE(AI)">CSE(AI)</option>
+            <option value="AIDS">AIDS</option>
+            <option value="CS(Software Engineering)">CS(Software Engineering)</option>
+            <option value="CSE(DS)">CSE(DS)</option>
+            <option value="CSE(IOT & Cyber Security)">CSE(IOT & Cyber Security)</option>
+            <option value="Electronics and Telecommunication">Electronics and Telecommunication</option>
+            <option value="Instrumentation ">Instrumentation </option>
+            <option value="Mechanical">Mechanical</option>
+            <option value="Civil">Civil</option>
+          </select><br><br>
+        </div>
+        <div id="year-container">
+          <label for="year">Academic Year:</label>
+          <select id="year" name="year">
+            <option value="First Year">First Year</option>
+            <option value="Second Year">Second Year</option>
+            <option value="Third Year">Third Year</option>
+            <option value="Fourth Year">Fourth Year</option>
+          </select><br><br>
+        </div>
+        <div id="role-container">
+          <label for="role">Role:</label>
+          <select id="role" name="role">
+            <option value="primary">Have Vehicle</option>
+            <option value="secondary">Don't Have Vehicle</option>
+          </select><br><br>
+        </div>
+        <div id="category-container">
+          <label for="category">Locality: </label>
+          <select id="category" name="category">
+            
+            <option value="Swargate">Swargate</option>
+            <option value="Hadapsar">Hadapsar</option>
+            <option value="Katraj">Katraj</option>
+            <option value="Kothrud">Kothrud</option>
+            <option value="Kondhwa">Kondhwa</option>
+            <option value="Viman Nagar">Viman Nagar</option>
+            <option value="Balaji Nagar">Balaji Nagar</option>
+            <option value="Dhankawadi">Dhankawadi</option>            
+            <option value="Camp (MG Road)">Camp (MG Road)</option>
+            <option value="Saswad">Saswad</option>
+            <option value="Market Yard">Market Yard</option>          
+            <option value="Wakad">Wakad</option>
+
+          </select><br><br>
+        </div>
+        <div id="mobile-container">
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required><br><br>
+        </div>
+        <button id="auth-btn" type="submit">Register</button>
+      </form>
+      <button id="toggle-btn">Already have an account? Login</button>
+      
+    </div>
+
+    <div class="primary-users-section" style="display: none;">
+      <h2>Choose To Go With</h2>
+      <!-- Added input for filtering -->
+      <input type="text" id="filter-input" placeholder="Filter primary users..." />
+      <!-- Added dropdown for category filtering -->
+      <select id="category-filter">
+       
+        <option value="Swargate">Swargate</option>
+        <option value="Hadapsar">Hadapsar</option>
+        <option value="Katraj">Katraj</option>
+        <option value="Kothrud">Kothrud</option>
+        <option value="Kondhwa">Kondhwa</option>
+        <option value="Viman Nagar">Viman Nagar</option>
+        <option value="Balaji Nagar">Balaji Nagar</option>
+        <option value="Dhankawadi">Dhankawadi</option>            
+        <option value="Camp (MG Road)">Camp (MG Road)</option>
+        <option value="Saswad">Saswad</option>
+        <option value="Market Yard">Market Yard</option>          
+        <option value="Wakad">Wakad</option>
+
+        
+      </select><br><br> 
+      <ul id="primary-users-list"></ul>
+    </div>
+
+    <div class="couples-section" style="display: none;">
+      <h2>Going Together</h2>
+      <ul id="couples-list"></ul>
+    </div>
+  </div>
+  
+  <div class="info-modal" id="info-modal">
+    <h3>User Details</h3>
+    <div class="modal-grid">
+        <div class="modal-row">
+            <span class="modal-label">Email:</span>
+            <span id="modal-email" class="modal-value"></span>
+        </div>
+        <div class="modal-row">
+            <span class="modal-label">Branch:</span>
+            <span id="modal-branch" class="modal-value"></span>
+        </div>
+        <div class="modal-row">
+            <span class="modal-label">Academic Year:</span>
+            <span id="modal-year" class="modal-value"></span>
+        </div>
+        <div class="modal-row">
+            <span class="modal-label">Mobile:</span>
+            <span id="modal-mobile" class="modal-value"></span>
+        </div>
+        <div id="modal-backdrop" style="display: none;"></div>
+    </div>
+    <button onclick="closeModal()">Close</button>
+</div>
+</div>
+
+  <!-- Firebase Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+  <!-- Custom Script -->
+  <script src="./script.js"></script>
+</body>
+</html>
