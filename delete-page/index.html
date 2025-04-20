@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-container" id="form-container">
+      <h2 id="form-title">Login</h2>
+      <form id="auth-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <button id="auth-btn" type="submit">Login</button>
+      </form>
+    </div>
+
+    <div class="user-details-section" style="display: none;">
+      <h2>Your Details</h2>
+      <!-- Display user details here -->
+      <div id="user-details"></div> 
+      <!-- Delete account button -->
+      <button id="delete-btn" style="display: none;">Delete Account</button> 
+    </div>
+
+    <!-- Error message -->
+    <div class="error-message" id="error-message" style="color: red;"></div>
+  </div>
+
+  <!-- Firebase Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="./script.js"></script> <!-- Ensure this points to your JavaScript file -->
+</body>
+</html>
