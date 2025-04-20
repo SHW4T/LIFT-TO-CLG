@@ -57,7 +57,7 @@ Secondary users can search and filter primary users based on locality and name, 
 ---
 
 ## Screenshots & Demo
-
+https://www.linkedin.com/posts/shashwat-thakur-2b2618354_introducing-vit-companion-a-ride-sharing-activity-7319810802511691776-3y2K?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFheUKYBKwZZDEvvdUkR3gMmMJ6eP8me_zg
 ---
 
 ## License
@@ -69,7 +69,7 @@ This project is licensed under the MIT License.
 ## Contact
 
 For questions or collaboration, contact:  
-SHASHWAT THAKUR - 
+SHASHWAT THAKUR - linkedin.com/in/shashwat-thakur-2b2618354
 
 ---
 
