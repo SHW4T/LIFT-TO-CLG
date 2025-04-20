@@ -1,0 +1,263 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* Form Container */
+.form-container {
+  display: inline-block;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px;
+  padding: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h2 {
+  margin-top: 0;
+  color: #4CAF50;
+  font-size: 28px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Form Elements */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #555;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+select:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
+}
+
+button {
+  width: 100%;
+  height: 50px;
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.02);
+}
+
+/* Sections */
+.primary-users-section,
+.couples-section {
+  display: none;
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Lists */
+#primary-users-list,
+#couples-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#primary-users-list li,
+#couples-list li {
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#primary-users-list li:hover,
+#couples-list li:hover {
+  background-color: #f8f8f8;
+  transform: translateX(10px);
+}
+
+#primary-users-list li:last-child,
+#couples-list li:last-child {
+  border-bottom: none;
+}
+
+/* Info Icon */
+.info-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #02b6f7;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 16px;
+  line-height: 24px;
+  transition: background-color 0.3s ease;
+}
+
+.info-icon:hover {
+  background-color: #45a049;
+}
+
+/* Modal Styles */
+.info-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(253, 255, 160, 0.98);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-width: 400px;
+  width: 90%;
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 999;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  .form-container {
+    width: 90%;
+    margin: 10px auto;
+    padding: 20px;
+  }
+
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  select {
+    height: 45px;
+    margin-bottom: 15px;
+  }
+
+  button {
+    height: 45px;
+  }
+
+  #primary-users-list li,
+  #couples-list li {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form-container {
+    width: 100%;
+    margin: 10px auto;
+    padding: 15px;
+  }
+
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  select {
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    height: 40px;
+  }
+}
+
+/* Email Error */
+.email-error {
+  color: #ff4444;
+  font-size: 0.9em;
+  margin: -10px 0 10px 0;
+  display: none;
+}
