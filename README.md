@@ -57,7 +57,7 @@ Secondary users can search and filter primary users based on locality and name, 
 ---
 
 ## Screenshots & Demo
-https://www.linkedin.com/posts/shwat_introducing-vit-companion-a-ride-sharing-activity-7319810802511691776-cWRT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFheUKYBKwZZDEvvdUkR3gMmMJ6eP8me_zg
+[LinkedIn Post](https://www.linkedin.com/posts/shwat_introducing-vit-companion-a-ride-sharing-activity-7319810802511691776-cWRT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFheUKYBKwZZDEvvdUkR3gMmMJ6eP8me_zg)
 ---
 
 ## License
